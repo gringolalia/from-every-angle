@@ -23,21 +23,21 @@ const routes: Routes = [
         path: 'todos',
         component: TodosComponent,
         data: {
-          title: 'Todos'
+          title: 'Quefazeres'
         }
       },
       {
         path: 'stock-market',
         component: StockMarketComponent,
         data: {
-          title: 'Stock Market'
+          title: 'Bolsa de Valores'
         }
       },
       {
         path: 'theming',
         component: ParentComponent,
         data: {
-          title: 'Theming'
+          title: 'Temas'
         }
       },
       {
@@ -45,7 +45,7 @@ const routes: Routes = [
         component: AuthenticatedComponent,
         canActivate: [AuthGuardService],
         data: {
-          title: 'Authenticated'
+          title: 'Autenticado'
         }
       }
     ]

@@ -21,10 +21,10 @@ export class SettingsComponent implements OnInit, OnDestroy {
   settings: SettingsState;
 
   themes = [
-    { value: 'DEFAULT-THEME', label: 'Blue' },
-    { value: 'LIGHT-THEME', label: 'Light' },
-    { value: 'NATURE-THEME', label: 'Nature' },
-    { value: 'BLACK-THEME', label: 'Dark' }
+    { value: 'DEFAULT-THEME', label: 'Azulado' },
+    { value: 'LIGHT-THEME', label: 'Claro' },
+    { value: 'NATURE-THEME', label: 'Natureza' },
+    { value: 'BLACK-THEME', label: 'Trevas' }
   ];
 
   constructor(private store: Store<any>) {

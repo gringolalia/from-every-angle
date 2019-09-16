@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12"><h1>Settings</h1></div>
+    <div class="col-sm-12"><h1>Configurações</h1></div>
   </div>
   <br>
   <div class="row">
@@ -20,12 +20,12 @@
     <div class="col-md-6 icon-form-field">
       <mat-icon color="accent">lightbulb_outline</mat-icon>
       <mat-form-field>
-        <mat-select placeholder="Auto night mode (from 21:00 to 7:00)"
+        <mat-select placeholder="Modo Noturno Automático"
                     name="auto-night-mode"
                     [ngModel]="settings?.autoNightMode?.toString()"
                     (selectionChange)="onAutoNightModeSelect($event)">
-          <mat-option value="false">Off</mat-option>
-          <mat-option value="true">On</mat-option>
+          <mat-option value="false">Desligado</mat-option>
+          <mat-option value="true">Ligado</mat-option>
         </mat-select>
       </mat-form-field>
     </div>

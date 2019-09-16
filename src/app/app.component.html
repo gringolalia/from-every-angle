@@ -1,7 +1,7 @@
 <mat-sidenav-container>
 
   <mat-sidenav #sidenav mode="push">
-    <div class="branding"><img [src]="logo"/> <span>Angular Starter</span></div>
+    <div class="branding"><span><i class="fa fa-gears fa-lg"></i>&nbsp;Angular Banjo Tango</span></div>
     <mat-nav-list>
       <a mat-list-item *ngFor="let item of navigationSideMenu" (click)="sidenav.close()"
          [routerLink]="[item.link]" routerLinkActive="active">
@@ -18,18 +18,16 @@
   <div class="wrapper">
 
     <div class="toolbar">
-      <mat-toolbar color="primary">
+      <mat-toolbar color="primary" class="dignity">
         <button mat-icon-button class="d-md-none" (click)="sidenav.open()">
           <mat-icon>menu</mat-icon>
         </button>
 
         <span routerLink="" class="branding spacer center d-inline d-sm-none">
-          <img [src]="logo"/></span>
+          <mat-icon>directions_bike</mat-icon></span>
         <span routerLink=""
-              class="branding spacer center d-none d-sm-inline d-md-none"><img
-          [src]="logo"/> Angular Starter</span>
-        <span routerLink="" class="branding spacer d-none d-md-inline"><img
-          [src]="logo"/> Angular ngRx Material Starter</span>
+              class="branding spacer center d-none d-sm-inline d-md-none"><mat-icon>music_note</mat-icon>Banjo Duelism </span>
+        <span routerLink="" class="branding spacer d-none d-md-inline dignity"><i class="fa fa-gears fa-lg"></i>&nbsp; Engenho Novo Angular</span>
 
         <span class="d-none d-md-inline">
           <button mat-button class="nav-button" *ngFor="let item of navigation"
@@ -38,84 +36,49 @@
           </button>
         </span>
 
-        <button mat-button class="sign-in-button "
+        <button mat-raised-button class="sign-in-button "
                 *ngIf="!isAuthenticated"
                 (click)="onLoginClick()">
-          Sign in
+          Entrar
         </button>
 
         <button *ngIf="isAuthenticated"
                 mat-icon-button
                 [matMenuTriggerFor]="toolbarUserMenu">
-          <mat-icon>person</mat-icon>
+          <mat-icon>accessibility</mat-icon>
         </button>
         <mat-menu #toolbarUserMenu="matMenu">
           <button mat-menu-item (click)="onLogoutClick()">
-            <mat-icon>power_settings_new</mat-icon>
-            <span>Logout</span>
+            <mat-icon>beach_access</mat-icon>
+            <span>Sair</span>
           </button>
         </mat-menu>
 
         <button mat-icon-button routerLink="settings" class="d-none d-sm-inline">
-          <mat-icon>settings</mat-icon>
+          <mat-icon>local_bar</mat-icon>
         </button>
 
-        <a matTooltip="Project Github Repository"
+        <a matTooltip="Angular Github Repository"
            matdTooltipPosition="before"
            mat-icon-button
            class="link d-none d-sm-inline"
            href="https://github.com/tomastrajan/angular-ngrx-material-starter"
            target="_blank">
-          <i class="fa fa-github fa-2x"></i>
+          <i class="fa fa-balance-scale fa-lg" style="color: white;"></i>
         </a>
 
       </mat-toolbar>
     </div>
 
-    <div class="content"
+    <div class="content dignity"
          [@routerTransition]="o.isActivated && o.activatedRoute.routeConfig.path">
       <router-outlet #o="outlet"></router-outlet>
     </div>
 
     <div class="footer">
-      <div class="row">
-        <div class="col-sm-12 links">
-          <a href="https://www.github.com/tomastrajan" target="_blank">
-            <i class="fa fa-github fa-2x" aria-hidden="true"></i>
-            <span>Github</span>
-          </a>
-          <a href="https://www.medium.com/@tomastrajan" target="_blank">
-            <i class="fa fa-medium fa-2x" aria-hidden="true"></i>
-            <span>Medium</span>
-          </a>
-          <a href="https://www.twitter.com/tomastrajan" target="_blank">
-            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-            <span>Twitter</span>
-          </a>
-          <a href="https://www.youtube.com/channel/UC7XgRHIVoqnh3U5Vmly9ofQ"
-             target="_blank">
-            <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
-            <span>Youtube</span>
-          </a>
-          <a href="https://www.instagram.com/tomastrajan" target="_blank">
-            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-            <span>Instagram</span>
-          </a>
-          <a href="https://www.slides.com/tomastrajan" target="_blank">
-            <i class="fa fa-desktop fa-2x" aria-hidden="true"></i>
-            <span>Slides</span>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 signature">
-          &#169; {{year}} - Tomas Trajan
-          <br class="d-block d-sm-none">
-          <a matTooltip="Show changelog"
-             matTooltipPosition="before"
-             href="https://github.com/tomastrajan/angular-ngrx-material-starter/blob/master/CHANGELOG.md">
-            <i class="fa fa-rocket"></i> {{version}} <span *ngIf="!isProd">[{{envName}}]</span>
-          </a>
+      <div class="row" style="color: white; background-color: #607d8b;">
+        <div class="col-12 signature"><mat-icon>directions_bike</mat-icon>&nbsp;
+          Projeto de Tomas Trajan, clonado na Samboja pelo Gran Bretônio 2018 e honi soit qui mal y pense
         </div>
       </div>
     </div>

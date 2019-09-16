@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="offset-md-2 col-md-8 entry">
-      <anms-big-input placeholder="I am going to do..."
+      <anms-big-input placeholder="Eu farei o seguinte ..."
                       [value]="newTodo"
                       (keyup)="onNewTodoChange($event.target.value)"
                       (keyup.enter)="!isAddTodoDisabled && onAddTodo()"
@@ -9,12 +9,12 @@
         <anms-big-input-action icon="add" color="accent"
                                (action)="onAddTodo()"
                                [disabled]="isAddTodoDisabled"
-                               matTooltip="Add new todo" matTooltipPosition="before">
+                               matTooltip="Acrescentar Novo Quefazer" matTooltipPosition="before">
         </anms-big-input-action>
         <anms-big-input-action icon="delete_forever" color="warn"
                                (action)="onRemoveDoneTodos()"
                                [disabled]="isRemoveDoneTodosDisabled"
-                               matTooltip="Remove done todos" matTooltipPosition="after">
+                               matTooltip="Tirar Quefazeres Já Feitos" matTooltipPosition="after">
         </anms-big-input-action>
       </anms-big-input>
     </div>
@@ -22,14 +22,14 @@
   <div class="row">
     <div class="col-md-6">
       <h2>
-        Todo List
+        Lista de Quefazeres
         <button class="todos-filter" mat-icon-button [matMenuTriggerFor]="todosFilter">
           <mat-icon>filter_list</mat-icon>
         </button>
         <mat-menu class="todos-filter-menu-overlay" #todosFilter="matMenu" xPosition="before">
           <button mat-menu-item (click)="onFilterTodos('ALL')" [ngClass]="{ active: todos.filter === 'ALL' }">
             <mat-icon>assignment</mat-icon>
-            <span>All</span>
+            <span>Todos</span>
           </button>
           <button mat-menu-item (click)="onFilterTodos('DONE')" [ngClass]="{ active: todos.filter === 'DONE' }">
             <mat-icon>done</mat-icon>
@@ -37,12 +37,12 @@
           </button>
           <button mat-menu-item (click)="onFilterTodos('ACTIVE')" [ngClass]="{ active: todos.filter === 'ACTIVE' }">
             <mat-icon>check_box_outline_blank</mat-icon>
-            <span>Active</span>
+            <span>Ativo</span>
           </button>
         </mat-menu>
         <mat-chip-list class="todos-filter-info d-none d-sm-block">
           <mat-chip>
-            Displaying {{todos.filter !== 'ALL' ? filteredTodos.length : ''}}
+            Exibindo {{todos.filter !== 'ALL' ? filteredTodos.length : ''}}
             {{todos.filter.toLowerCase()}}
             {{todos.filter === 'ALL' ? filteredTodos.length : ''}}
             todo{{filteredTodos.length > 1 ? 's' : ''}}
@@ -60,19 +60,16 @@
       <br>
       <br>
     </div>
-    <div class="offset-md-1  col-md-5">
-      <h2>Todo Example</h2>
+    <div class="offset-md-1  col-md-5 dignity">
+      <h2>Exemplo: Quefazeres</h2>
       <p>
-        This is a classic <code>todo</code> example with support for
-        adding, toggling, removing and filtering of the todo items.
+        Isto é um exemplo de <code>quefazer</code> clássico com apoio para chaveando, adicionando, tirando e filtrando os ítens na lista.
       </p>
       <p>
-        State handling is implemented using <code>ngrx</code> module
-        and support for lazy loaded reducers (this is a lazy loaded feature module).
+        Λορεμ ιπσθμ δολορ σιτ αμετ, περ ερθδιτι σιγνιφερθμqθε ει, εθμ σολθτα ιντερεσσετ αccομμοδαρε cθ. Qθι σονετ επιcθρει ιδ. Εθ μει σαλε qθοδσι. Qθισ βρθτε μελιθσ προ νο, ατ vισ ασσθμ vερεαρ cιvιβθσ, εξ μινιμ ιθδιcαβιτ εφφιcιενδι qθο. Cασε δολορεμ προ εξ, μει μεισ εθισμοδ περτιναcια αν.
       </p>
       <p>
-        Todos are persisted into local storage so you should see your todos
-        also on later visits when using the same browser.
+        Λορεμ ιπσθμ δολορ σιτ αμετ, περ ερθδιτι σιγνιφερθμqθε ει, εθμ σολθτα ιντερεσσετ αccομμοδαρε cθ. Qθι σονετ επιcθρει ιδ. Εθ μει σαλε qθοδσι. Qθισ βρθτε μελιθσ προ νο, ατ vισ ασσθμ vερεαρ cιvιβθσ, εξ μινιμ ιθδιcαβιτ εφφιcιενδι qθο. Cασε δολορεμ προ εξ, μει μεισ εθισμοδ περτιναcια αν.
       </p>
       <br>
     </div>
